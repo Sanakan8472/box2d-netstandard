@@ -328,7 +328,7 @@ namespace Box2DX.Collision
 
 						float f = fcn.Evaluate(xfA, xfB);
 
-						if (Common.Math.Abs(f - target) < 0.025f * tolerance)
+						if (Common.Math.Abs(f - target) < 0.025f * tolerance || rootIterCount >= 40)
 						{
 							newAlpha = x;
 							break;
